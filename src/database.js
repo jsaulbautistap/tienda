@@ -5,7 +5,7 @@ moongose.set('strictQuery', true)
 
 const connection = async () =>{
     try{
-        const {connection} = await moongose.connect(process.env.DT_URI_LOCAL)
+        const {connection} = await moongose.connect(process.env.DT_URI_PRODUCTION)
         console.log(`base de datos conectado a ${connection.host} en el puerto ${connection.port}`)
 
     }catch (error){
